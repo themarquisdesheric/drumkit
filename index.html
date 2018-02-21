@@ -1,73 +1,72 @@
 <!DOCTYPE html>
 <html>
   <head>
-	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Vanilla Drumkit</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" type="text/css" media="screen" href="styles.css" />
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Vanilla Drumkit</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="styles.css" />
   </head>
   <body>
-	<div id="wrapper">
-	  <section id="drum-panel">
+    <div id="wrapper">
+      <section id="drum-panel">
+        <div class="drum" data-key="32">
+          <span>Kick</span>
+          <span class="key">space</span>
+        </div>
+        
+        <div class="drum" data-key="13">
+          <span>Snare</span>
+          <span class="key">enter</span>
+        </div>
+        
+        <div class="drum" data-key="16">
+          <span>Hihat</span>
+          <span class="key">shift</span>
+        </div>
+        
+        <div class="drum" data-key="38">
+          <span>Openhat</span>
+          <span class="key">up</span>
+        </div>
+        
+        <div class="drum" data-key="40">
+          <span>Clap</span>
+          <span class="key">down</span>
+        </div>
+        
+        <div class="drum" data-key="37">
+          <span>Ride</span>
+          <span class="key">left</span>
+        </div>
+        
+        <div class="drum" data-key="39">
+          <span>Tom</span>
+          <span class="key">right</span>
+        </div>
+        
+        <div class="drum" data-key="8">
+          <span>Boom</span>
+          <span class="key">backspace</span>
+        </div>
+        
+        <div class="drum" data-key="81">
+          <span>Tink</span>
+          <span class="key">q</span>
+        </div>
+      </section>
+    </div>
 
-		<div class="drum" data-key="32">
-		  <span>Kick</span>
-		  <span class="key">space</span>
-		</div>
-		
-		<div class="drum" data-key="13">
-		  <span>Snare</span>
-		  <span class="key">enter</span>
-		</div>
-		
-		<div class="drum" data-key="16">
-		  <span>Hihat</span>
-		  <span class="key">shift</span>
-		</div>
-		
-		<div class="drum" data-key="38">
-		  <span>Openhat</span>
-		  <span class="key">up</span>
-		</div>
-		
-		<div class="drum" data-key="40">
-		  <span>Clap</span>
-		  <span class="key">down</span>
-		</div>
-		
-		<div class="drum" data-key="37">
-		  <span>Ride</span>
-		  <span class="key">left</span>
-		</div>
-		
-		<div class="drum" data-key="39">
-		  <span>Tom</span>
-		  <span class="key">right</span>
-		</div>
-		
-		<div class="drum" data-key="8">
-		  <span>Boom</span>
-		  <span class="key">backspace</span>
-		</div>
-		
-		<div class="drum" data-key="81">
-		  <span>Tink</span>
-		  <span class="key">q</span>
-		</div>
-	  </section>
-	</div>
+    <audio data-key="40" src="sounds/clap.wav"></audio>
+    <audio data-key="16" src="sounds/hihat.wav"></audio>
+    <audio data-key="32" src="sounds/kick.wav"></audio>
+    <audio data-key="38" src="sounds/openhat.wav"></audio>
+    <audio data-key="8" src="sounds/boom.wav"></audio>
+    <audio data-key="37" src="sounds/ride.wav"></audio>
+    <audio data-key="13" src="sounds/snare.wav"></audio>
+    <audio data-key="39" src="sounds/tom.wav"></audio>
+    <audio data-key="81" src="sounds/tink.wav"></audio>
 
-	<audio data-key="40" src="sounds/clap.wav"></audio>
-	<audio data-key="16" src="sounds/hihat.wav"></audio>
-	<audio data-key="32" src="sounds/kick.wav"></audio>
-	<audio data-key="38" src="sounds/openhat.wav"></audio>
-	<audio data-key="8" src="sounds/boom.wav"></audio>
-	<audio data-key="37" src="sounds/ride.wav"></audio>
-	<audio data-key="13" src="sounds/snare.wav"></audio>
-	<audio data-key="39" src="sounds/tom.wav"></audio>
-	<audio data-key="81" src="sounds/tink.wav"></audio>
-
-	<script src="app.js"></script>
+    <script src="app.js"></script>
   </body>
 </html>

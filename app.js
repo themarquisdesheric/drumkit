@@ -1,39 +1,39 @@
-
-// make background change to a random color each keystroke
-
-// assign random color to each drum instead of cycling at random? 
-
 const playSound = e => {
   const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
   const drum = document.querySelector(`div[data-key="${e.keyCode}"]`);
-
+  
   if (!audio) return;
-
-  drum.classList.add(getRandomColor());
-
+  
+  drum.classList.add('playing', drumColors[e.keyCode]);
+  
   // reset sample to beginning in case trigger is pressed too quickly
   audio.currentTime = 0;
   audio.play();
 }
 
-const removeTransitionEffect = e => {
+const removeTransitionEffects = e => {
   const [drum, ...rest] = e.target.classList;
-
+  
   if (e.propertyName !== 'transform') return;
-
+  
   // sometimes several classes get added if trigger is pressed too quickly, so remove all classes but the first
   e.target.classList.remove(...rest);
 }
 
-const getRandomColor = () => {
-  const colors = ['pastel-red', 'pastel-orange', 'pastel-yellow', 'pastel-green', 'pastel-blue'];
-  const randomInt = Math.floor(Math.random() * colors.length);
+const drums = Array.from(document.querySelectorAll('.drum'));
+const colors = ['red', 'orange', 'yellow', 'green', 'blue'];
+const drumColors = {}; 
+let count = 0;
 
-  return colors[randomInt];
-}
+drums.forEach( (drum, i) => {
+  const key = drum.getAttribute('data-key');
 
-// turn nodeList into an array
-const drums = [...document.querySelectorAll('.drum')];
-drums.forEach(drum => drum.addEventListener('transitionend', removeTransitionEffect));
+  if (i === 5) count = 0;
+  
+  drumColors[key] = colors[count];
+  count++;
+
+  drum.addEventListener('transitionend', removeTransitionEffects);
+});
 
 window.addEventListener('keydown', playSound);
