@@ -4,12 +4,15 @@ const playSound = e => {
   const drum = document.querySelector(`div[data-key="${keyCode}"]`);
 
   if (!audio) return;
-  
+
+  if (keyCount % 5 === 0) changeBackground();
+
   drum.classList.add('playing', drumColors[keyCode]);
   
   // reset sample to beginning in case trigger is pressed too quickly
   audio.currentTime = 0;
   audio.play();
+  keyCount++;
 }
 
 const removeTransitionEffects = e => {
@@ -21,10 +24,29 @@ const removeTransitionEffects = e => {
   e.target.classList.remove(...rest);
 }
 
+const getRandomColor = () => {
+  const randomInt = Math.floor(Math.random() * colors.length);
+  return colors[randomInt];
+}
+
+const changeBackground = () => {
+  const currentBackground = wrapper.classList[0];
+  let newBackground = `${getRandomColor()}-background`;
+
+  while (currentBackground === newBackground) {
+    newBackground = `${getRandomColor()}-background`;
+  }
+
+  wrapper.classList.remove(currentBackground);
+  wrapper.classList.add(newBackground);
+}
+
+const wrapper = document.getElementById('wrapper');
 const drums = Array.from(document.querySelectorAll('.drum'));
 const colors = ['orange', 'yellow', 'green', 'blue', 'red'];
 const drumColors = {}; 
 let count = 0;
+let keyCount = 1;
 
 drums.forEach( (drum, i) => {
   const key = drum.getAttribute('data-key');
