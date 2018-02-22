@@ -16,7 +16,7 @@ body { margin: 0; }
   flex-wrap: wrap;
   width: 37.7%;
   border-radius: 5%;
-  background-color: rgba(255, 255, 255, .9);
+  background-color: rgba(255, 255, 255, .8);
   padding: 2em;
   box-shadow: 1px 1px 5px 6px rgba(0, 0, 0, .2);
 }
@@ -80,21 +80,21 @@ span.arrow {
 
 .red {
   border-color: #FB4E52;
-  box-shadow: 1px 1px 1px 1px rgba(255, 0, 0, .2);
+  color: #FB4E52;
 }
 .orange {
   border-color: #FF9E5C;
-  box-shadow: 1px 1px 1px 1px rgba(255, 0, 0, .2);
+  color: #FF9E5C;
 }
 .yellow {
   border-color: #FFF537;
-  box-shadow: 1px 1px 1px 1px rgba(110, 110, 12, 0.2);
+  color: #FFF537;
 }
 .green {
   border-color: #46C28F;
-  box-shadow: 1px 1px 1px 1px rgba(0, 255, 0, .2);
+  color: #46C28F;
 }
 .blue {
   border-color: #5EDEFB;
-  box-shadow: 1px 1px 1px 1px rgba(0, 0, 255, .2);
+  color: #5EDEFB;
 }

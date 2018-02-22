@@ -22,7 +22,7 @@ const removeTransitionEffects = e => {
 }
 
 const drums = Array.from(document.querySelectorAll('.drum'));
-const colors = ['red', 'orange', 'yellow', 'green', 'blue'];
+const colors = ['orange', 'yellow', 'green', 'blue', 'red'];
 const drumColors = {}; 
 let count = 0;
 
