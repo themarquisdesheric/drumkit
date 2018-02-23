@@ -41,6 +41,7 @@ p {
   font-size: 1.75em;
   text-transform: lowercase;
   text-shadow: 0 0 1px #000;
+  user-select: none;
 }
 
 
@@ -48,6 +49,7 @@ span {
   display: block;
   color: #fff;
   text-transform: uppercase;
+  user-select: none;
 }
 
 span.single-char {
