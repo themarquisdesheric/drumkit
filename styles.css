@@ -116,3 +116,10 @@ span.arrow {
   border-color: #5EDEFB;
   color: #5EDEFB;
 }
+
+.violet-background { background-color: #ee82ee; }
+
+.violet {
+  border-color: #ee82ee;
+  color: #ee82ee;
+}

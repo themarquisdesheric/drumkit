@@ -43,7 +43,7 @@ const changeBackground = () => {
 
 const wrapper = document.getElementById('wrapper');
 const drums = Array.from(document.querySelectorAll('.drum'));
-const colors = ['orange', 'yellow', 'green', 'blue', 'red'];
+const colors = ['orange', 'yellow', 'violet', 'green', 'blue', 'red'];
 const drumColors = {}; 
 let count = 0;
 let keyCount = 1;
@@ -51,7 +51,8 @@ let keyCount = 1;
 drums.forEach( (drum, i) => {
   const key = drum.getAttribute('data-key');
 
-  if (i === 5) count = 0;
+  // reset and stagger colors
+  if (i === 6) count = 1;
   
   drumColors[key] = colors[count];
   count++;
