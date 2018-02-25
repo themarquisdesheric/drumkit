@@ -8,14 +8,15 @@ body { margin: 0; }
   justify-content: center;
 }
 
-#drum-panel, .drum { border: .5em solid rgba(0, 0, 0, .7); }
+#drum-panel, 
+.drum { border: .5em solid rgba(0, 0, 0, .7); }
 
 #drum-panel {
-  width: 37.7%;
+  width: calc(300px + 10% + 5.5em);
   border-radius: 5%;
   background-color: rgba(255, 255, 255, .8);
   padding: 2.25%;
-  box-shadow: -6px 10px 12px 0px rgba(0, 0, 0, 0.1), 4px 6px 12px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: -6px 10px 12px 0px rgba(0, 0, 0, 0.2), 4px 6px 12px 0 rgba(0, 0, 0, 0.3);
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -26,7 +27,7 @@ body { margin: 0; }
   margin: 1em;
   background-color: rgba(0, 0, 0, .7);
   border-radius: 10%;
-  box-shadow: 1px 1px 1px 2px rgba(0, 0, 0, .2);
+  box-shadow: -6px 10px 12px 0px rgba(0, 0, 0, 0.1), 4px 6px 12px 0 rgba(0, 0, 0, 0.2);
   display: flex;
   flex-direction: column;
   flex-basis: 100px;
@@ -38,16 +39,17 @@ body { margin: 0; }
 p {
   margin: 0;
   font-family: 'Fjalla One', sans-serif;
-  font-size: 1.75em;
+  font-size: 1.5em;
   text-transform: lowercase;
   text-shadow: 0 0 1px #000;
+  user-select: none;
 }
-
 
 span {
   display: block;
   color: #fff;
   text-transform: uppercase;
+  user-select: none;
 }
 
 span.single-char {
@@ -55,13 +57,11 @@ span.single-char {
   padding: 2.5px 5.21px;
 }
 
-span.arrow {
-  padding: 2.5px 8.21px;
-}
+span.arrow { padding: 2.5px 8.21px; }
 
 .key {
   color: #5E5E5E;
-  font: bold .6em arial;
+  font: bold .575em arial;
   margin-top: 10px;
   padding: 4px 5px;
   background: #EFF0F2;
@@ -113,4 +113,50 @@ span.arrow {
 .blue {
   border-color: #5EDEFB;
   color: #5EDEFB;
+}
+
+.violet-background { background-color: #ee82ee; }
+
+.violet {
+  border-color: #ee82ee;
+  color: #ee82ee;
+}
+
+/* 
+
+  media queries
+
+*/
+
+@media (max-width: 1175px) {
+  .drum { 
+    padding: 4% 1%;
+  }
+}
+
+@media (max-width: 1020px) {
+  .drum {
+    padding: 6.5% 1% 1%;
+    transition: .1s;
+  }
+
+  .key { transform: scale(0) }
+}
+
+@media (max-width: 850px) {
+  #drum-panel { 
+    max-width: 364px;
+  }
+
+  .drum {
+    margin: 0.5em;
+    padding: 8.5% 0 0%;
+    flex-basis: 85px;
+  }
+
+  p { font-size: 1.2em; }
+}
+
+@media (max-width: 550px) {
+  #drum-panel { max-width: 352px; }
 }
