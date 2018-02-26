@@ -44,7 +44,7 @@ const wrapper = document.getElementById('wrapper'),
   drums = Array.from(document.querySelectorAll('.drum')),
   colors = ['orange', 'yellow', 'violet', 'green', 'blue', 'red'],
   drumColors = {}; 
-  
+
 let count = 0,
   keyCount = 1;
 
@@ -58,14 +58,8 @@ drums.forEach( (drum, i) => {
   count++;
   
   drum.addEventListener('transitionend', removeTransitionEffects);
-  drum.addEventListener('click', e => {
+  drum.addEventListener('pointerdown', e => {
     e.stopPropagation();
-    playSound({ keyCode })
-  });
-  drum.firstElementChild
-    .addEventListener('touchstart', e => {
-    // prevent mouse event from firing
-    e.preventDefault();
     playSound({ keyCode });
   });
 });
