@@ -152,6 +152,7 @@ span.arrow { padding: 2.5px 8.21px; }
     margin: 0.5em;
     padding: 8.5% 0 0%;
     flex-basis: 85px;
+    touch-action: none;
   }
 
   p { font-size: 1.2em; }
