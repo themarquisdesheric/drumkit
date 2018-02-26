@@ -40,12 +40,13 @@ const changeBackground = () => {
   wrapper.classList.add(newBackground);
 }
 
-const wrapper = document.getElementById('wrapper');
-const drums = Array.from(document.querySelectorAll('.drum'));
-const colors = ['orange', 'yellow', 'violet', 'green', 'blue', 'red'];
-const drumColors = {}; 
-let count = 0;
-let keyCount = 1;
+const wrapper = document.getElementById('wrapper'), 
+  drums = Array.from(document.querySelectorAll('.drum')),
+  colors = ['orange', 'yellow', 'violet', 'green', 'blue', 'red'],
+  drumColors = {}; 
+  
+let count = 0,
+  keyCount = 1;
 
 drums.forEach( (drum, i) => {
   const keyCode = drum.getAttribute('data-key');
