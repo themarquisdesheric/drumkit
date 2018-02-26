@@ -56,9 +56,13 @@ drums.forEach( (drum, i) => {
   
   drumColors[key] = colors[count];
   count++;
-
-  drum.addEventListener('click', playSound)
+  
   drum.addEventListener('transitionend', removeTransitionEffects);
+  drum.addEventListener('click', playSound)
+  drum.addEventListener('touchstart', e => {
+    e.preventDefault();
+    playSound(e);
+  });
 });
 
 window.addEventListener('keydown', playSound);
