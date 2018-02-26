@@ -15,7 +15,7 @@ body { margin: 0; }
   width: calc(300px + 10% + 5.5em);
   border-radius: 5%;
   background-color: rgba(255, 255, 255, .8);
-  padding: 2.25%;
+  padding: 1.25%;
   box-shadow: -6px 10px 12px 0px rgba(0, 0, 0, 0.2), 4px 6px 12px 0 rgba(0, 0, 0, 0.3);
   display: flex;
   flex-wrap: wrap;
@@ -159,4 +159,19 @@ span.arrow { padding: 2.5px 8.21px; }
 
 @media (max-width: 550px) {
   #drum-panel { max-width: 352px; }
+}
+
+@media (max-width: 400px) {
+  #drum-panel { 
+    max-width: 295px; 
+  }
+
+  .drum {
+    padding: 7% 1%;
+    flex-basis: 60px;
+  }
+
+  p { font-size: 1em }
+
+  span { display: none }
 }
