@@ -3,6 +3,8 @@ body { margin: 0; }
 #wrapper {
   height: 100vh;
   width: 100vw;
+  /* disable double-tap to zoom to prevent 3500ms delay on tap */
+  touch-action: manipulation;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -152,8 +154,6 @@ span.arrow { padding: 2.5px 8.21px; }
     margin: 0.5em;
     padding: 8.5% 0 0%;
     flex-basis: 85px;
-    /* disable double-tap to zoom to prevent 3500ms delay on tap */
-    touch-action: manipulation;
   }
 
   p { font-size: 1.2em; }
