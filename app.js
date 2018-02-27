@@ -58,7 +58,11 @@ drums.forEach( (drum, i) => {
   count++;
   
   drum.addEventListener('transitionend', removeTransitionEffects);
-  drum.addEventListener('tap', e => playSound({ keyCode }));
+
+  drum.addEventListener('click', e => {
+    e.stopPropagation();
+    playSound({ keyCode });
+  });
 });
 
 window.addEventListener('keydown', playSound);
