@@ -58,8 +58,13 @@ drums.forEach( (drum, i) => {
   count++;
   
   drum.addEventListener('transitionend', removeTransitionEffects);
-  drum.addEventListener('pointerdown', e => {
+  drum.addEventListener('click', e => {
     e.stopPropagation();
+    playSound({ keyCode });
+  });
+  drum.addEventListener('touchend', e => {
+    // disable the browser handling of gestures
+    e.preventDefault();
     playSound({ keyCode });
   });
 });
