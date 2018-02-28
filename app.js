@@ -41,12 +41,12 @@ const changeBackground = () => {
 }
 
 const wrapper = document.getElementById('wrapper'), 
-  drums = Array.from(document.querySelectorAll('.drum')),
-  colors = ['orange', 'yellow', 'violet', 'green', 'blue', 'red'],
-  drumColors = {}; 
+      drums = Array.from(document.querySelectorAll('.drum')),
+      colors = ['orange', 'yellow', 'violet', 'green', 'blue', 'red'],
+      drumColors = {}; 
 
 let count = 0,
-  keyCount = 1;
+    keyCount = 1;
 
 drums.forEach( (drum, i) => {
   const keyCode = drum.getAttribute('data-key');
