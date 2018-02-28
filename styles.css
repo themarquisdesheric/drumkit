@@ -8,6 +8,21 @@ body { margin: 0; }
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: #5EDEFB;
+  animation-name: changeBackground;
+  animation-duration: 20s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes changeBackground {
+  0% { background-color: #5EDEFB; }
+  16.6% { background-color: #ee82ee; }
+  33.3% { background-color: #FFF537; }
+  49.9% { background-color: #46C28F; }
+  66.5% { background-color: #FF9E5C; }
+  83.1% { background-color: #FB4E52; }
+  100% { background-color: #5EDEFB; }
 }
 
 #drum-panel, 
@@ -82,42 +97,30 @@ span.arrow { padding: 2.5px 8.21px; }
 
 */
 
-.red-background { background-color: #FB4E52; }
-
 .red {
   border-color: #FB4E52;
   color: #FB4E52;
 }
-
-.orange-background { background-color: #FF9E5C; }
 
 .orange {
   border-color: #FF9E5C;
   color: #FF9E5C;
 }
 
-.yellow-background { background-color: #FFF537; }
-
 .yellow {
   border-color: #FFF537;
   color: #FFF537;
 }
-
-.green-background { background-color: #46C28F; }
 
 .green {
   border-color: #46C28F;
   color: #46C28F;
 }
 
-.blue-background { background-color: #5EDEFB; }
-
 .blue {
   border-color: #5EDEFB;
   color: #5EDEFB;
 }
-
-.violet-background { background-color: #ee82ee; }
 
 .violet {
   border-color: #ee82ee;
