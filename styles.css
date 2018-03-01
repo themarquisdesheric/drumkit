@@ -1,4 +1,7 @@
-body { margin: 0; }
+body { 
+  margin: 0;
+  overflow: hidden;
+}
 
 #wrapper {
   height: 100vh;
@@ -24,6 +27,7 @@ body { margin: 0; }
   flex-wrap: wrap;
   justify-content: space-around;
   animation: fadeIn 1s ease-in-out, makeAppearance 1s;
+  z-index: 20;
 }
 
 @keyframes fadeIn {
@@ -87,6 +91,39 @@ span.arrow { padding: 2.5px 8.21px; }
 }
 
 .playing { transform: scale(1.1); }
+
+/* 
+
+  cloud animations 
+
+*/
+
+.cloud {
+  position: absolute;
+  width: 250px;
+  height: 200px;
+  background: transparent url('images/cloud.png') 0 0 no-repeat;
+}
+
+.cloud1 {
+  top: 5%;
+  animation: clouds 25s linear infinite;
+}
+
+.cloud2 {
+  top: 60%;
+  animation: clouds 35s 8s linear infinite backwards;
+}
+
+@keyframes clouds {
+  from { transform: translateX(-255px); }
+  to { transform: translateX(1700px); }
+}
+
+@keyframes small-clouds {
+  from { transform: translateX(-130px); }
+  to { transform: translateX(625px); }
+}
 
 /* 
 
@@ -173,6 +210,22 @@ span.arrow { padding: 2.5px 8.21px; }
 
 @media (max-width: 550px) {
   #drum-panel { max-width: 352px; }
+
+  .cloud {
+    width: 124px;
+    height: 66px;
+    background: transparent url('images/small-cloud.png') 0 0 no-repeat;
+  }
+
+  .cloud1 { 
+    top: 15%;
+    animation: small-clouds 12s linear infinite; 
+  }
+  
+  .cloud2 { 
+    top: 68%;
+    animation: small-clouds 15s 5s linear infinite backwards; 
+  }
 }
 
 @media (max-width: 400px) {
