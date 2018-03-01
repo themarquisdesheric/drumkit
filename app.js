@@ -4,7 +4,7 @@ const playSound = ({ keyCode }) => {
 
   if (!audio) return;
 
-  if (keyCount % 5 === 0) changeBackground();
+  if (keyCount % 8 === 0) changeBackground();
 
   drum.classList.add('playing', drumColors[keyCode]);
   
