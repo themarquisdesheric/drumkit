@@ -1,4 +1,8 @@
-const playSound = ({ keyCode }) => {
+const playSound = e => {
+  const keyCode = e.keyCode || 
+                  e.target.getAttribute('data-key') || 
+                  e.path[1].getAttribute('data-key');
+
   const audio = document.querySelector(`audio[data-key="${keyCode}"]`);
   const drum = document.querySelector(`div[data-key="${keyCode}"]`);
 
@@ -56,13 +60,8 @@ drums.forEach( (drum, i) => {
   
   drumColors[keyCode] = colors[count];
   count++;
-  
-  drum.addEventListener('transitionend', removeTransitionEffects);
-
-  drum.addEventListener('click', e => {
-    e.stopPropagation();
-    playSound({ keyCode });
-  });
 });
 
 window.addEventListener('keydown', playSound);
+wrapper.addEventListener('click', playSound);
+wrapper.addEventListener('transitionend', removeTransitionEffects);
